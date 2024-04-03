@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.AdminController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="All Books">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="238.0" prefWidth="422.0">
+                     <children>
+                        <TextField fx:id="fldcategory" layoutX="169.0" layoutY="32.0" />
+                        <Label layoutX="25.0" layoutY="36.0" text="Enter Category to show" />
+                        <Button fx:id="btnsearch" layoutX="390.0" layoutY="32.0" mnemonicParsing="false" onAction="#searchbooksbycategory" text="Search" />
+                        <ListView fx:id="categorylist" layoutX="25.0" layoutY="86.0" prefHeight="265.0" prefWidth="549.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Book Modification">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="fldtitle" layoutX="139.0" layoutY="19.0" />
+                        <Label layoutX="14.0" layoutY="23.0" text="Enter book to modify" />
+                        <Button fx:id="btnchoose" layoutX="334.0" layoutY="19.0" mnemonicParsing="false" onAction="#showbook" text="Choose" />
+                        <Label layoutX="14.0" layoutY="67.0" text="CurrentTitle" />
+                        <Label layoutX="14.0" layoutY="85.0" text="Current Author" />
+                        <Label layoutX="14.0" layoutY="103.0" text="Current Publisher" />
+                        <Label layoutX="14.0" layoutY="121.0" text="Current ISBN" />
+                        <Label layoutX="14.0" layoutY="139.0" text="Curent Year of publishing" />
+                        <Label layoutX="14.0" layoutY="157.0" text="Current Category" />
+                        <Label layoutX="14.0" layoutY="177.0" text="Current nubmer of Copies" />
+                        <Label fx:id="label1" layoutX="91.0" layoutY="67.0" prefHeight="18.0" prefWidth="160.0" />
+                        <Label fx:id="label2" layoutX="105.0" layoutY="85.0" prefHeight="18.0" prefWidth="144.0" />
+                        <Label fx:id="label3" layoutX="119.0" layoutY="103.0" prefHeight="18.0" prefWidth="133.0" />
+                        <Label fx:id="label4" layoutX="105.0" layoutY="121.0" prefHeight="18.0" prefWidth="142.0" />
+                        <Label fx:id="label5" layoutX="159.0" layoutY="139.0" prefHeight="18.0" prefWidth="97.0" />
+                        <Label fx:id="label6" layoutX="119.0" layoutY="157.0" prefHeight="18.0" prefWidth="132.0" />
+                        <Label fx:id="label7" layoutX="159.0" layoutY="177.0" prefHeight="18.0" prefWidth="78.0" />
+                        <Label layoutX="263.0" layoutY="67.0" prefWidth="51.0" text="New Title" />
+                        <Label layoutX="268.0" layoutY="93.0" text="New Author" />
+                        <Label layoutX="262.0" layoutY="120.0" text="New Publisher" />
+                        <Label layoutX="262.0" layoutY="148.0" text="New ISBN" />
+                        <Label layoutX="238.0" layoutY="177.0" text="New Year of publishing" />
+                        <Label layoutX="276.0" layoutY="204.0" text="New Category" />
+                        <Label layoutX="239.0" layoutY="232.0" text="New nubmer of Copies" />
+                        <TextField fx:id="fld1" layoutX="363.0" layoutY="63.0" prefHeight="18.0" prefWidth="150.0" />
+                        <TextField fx:id="fld2" layoutX="363.0" layoutY="90.0" />
+                        <TextField fx:id="fld3" layoutX="363.0" layoutY="116.0" />
+                        <TextField fx:id="fld4" layoutX="363.0" layoutY="144.0" />
+                        <TextField fx:id="fld5" layoutX="364.0" layoutY="173.0" />
+                        <TextField fx:id="fld6" layoutX="365.0" layoutY="200.0" />
+                        <TextField fx:id="fld7" layoutX="366.0" layoutY="228.0" />
+                        <Button layoutX="100.0" layoutY="292.0" mnemonicParsing="false" onAction="#modifybook" text="Modify" />
+                        <Label fx:id="label8" layoutX="143.0" layoutY="45.0" prefHeight="18.0" prefWidth="141.0" />
+                        <Button fx:id="btndeletebook" layoutX="248.0" layoutY="292.0" mnemonicParsing="false" onAction="#deletebook" text="Delete Book" />
+                        <Label fx:id="removedlabel" layoutX="199.0" layoutY="328.0" prefHeight="18.0" prefWidth="148.0" textFill="RED" />
+                        <Button fx:id="addbook" layoutX="438.0" layoutY="292.0" mnemonicParsing="false" onAction="#addbook" text="Add Book" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="User Modification">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="userslist" layoutX="10.0" layoutY="36.0" prefHeight="323.0" prefWidth="198.0" />
+                        <Label layoutX="78.0" layoutY="14.0" prefHeight="18.0" prefWidth="62.0" text="All Users" />
+                        <Label layoutX="236.0" layoutY="15.0" text="Click on a user and then show to see user info." />
+                        <Label layoutX="222.0" layoutY="36.0" text="Username" />
+                        <Label layoutX="222.0" layoutY="54.0" text="Name" />
+                        <Label layoutX="222.0" layoutY="72.0" text="Last Name" />
+                        <Label layoutX="222.0" layoutY="90.0" text="A.Δ.Τ." />
+                        <Label layoutX="222.0" layoutY="108.0" text="Email" />
+                        <Label fx:id="label11" layoutX="294.0" layoutY="36.0" prefHeight="18.0" prefWidth="211.0" />
+                        <Label fx:id="label12" layoutX="294.0" layoutY="54.0" prefHeight="18.0" prefWidth="221.0" />
+                        <Label fx:id="label13" layoutX="294.0" layoutY="72.0" prefHeight="18.0" prefWidth="225.0" />
+                        <Label fx:id="label14" layoutX="290.0" layoutY="90.0" prefHeight="18.0" prefWidth="78.0" />
+                        <Label fx:id="label15" layoutX="288.0" layoutY="108.0" prefHeight="18.0" prefWidth="243.0" />
+                        <Label layoutX="222.0" layoutY="156.0" prefHeight="18.0" prefWidth="83.0" text="New Username" />
+                        <TextField fx:id="fld11" layoutX="305.0" layoutY="152.0" />
+                        <TextField fx:id="fld12" layoutX="306.0" layoutY="185.0" />
+                        <TextField fx:id="fld13" layoutX="306.0" layoutY="218.0" />
+                        <TextField fx:id="fld14" layoutX="307.0" layoutY="251.0" />
+                        <TextField fx:id="fld15" layoutX="308.0" layoutY="283.0" />
+                        <Label layoutX="224.0" layoutY="189.0" text="New Name" />
+                        <Label layoutX="224.0" layoutY="222.0" text="New Last Name" />
+                        <Label layoutX="224.0" layoutY="255.0" text="New Α.Δ.Τ." />
+                        <Label layoutX="224.0" layoutY="287.0" text="New Email" />
+                        <Button fx:id="savenewinfo" layoutX="316.0" layoutY="316.0" mnemonicParsing="false" onAction="#savenewinfo" text="Save New Information" />
+                        <Button fx:id="btnshowuser" layoutX="513.0" layoutY="12.0" mnemonicParsing="false" onAction="#selectedUser" text="Show" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

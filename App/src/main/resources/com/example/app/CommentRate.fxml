@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="222.0" prefWidth="496.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.CommentRate">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Rate out of Five" />
+      <TextField fx:id="rate" layoutX="14.0" layoutY="38.0" />
+      <Label layoutX="14.0" layoutY="71.0" text="Comment" />
+      <TextField fx:id="comment" layoutX="15.0" layoutY="89.0" prefHeight="122.0" prefWidth="330.0" />
+      <Button fx:id="btrating" layoutX="210.0" layoutY="38.0" mnemonicParsing="false" onAction="#rating" text="Add Rating" />
+      <Button fx:id="btcomment" layoutX="375.0" layoutY="137.0" mnemonicParsing="false" onAction="#comments" text="Add Comment" />
+      <Label fx:id="label1" layoutX="296.0" layoutY="42.0" prefHeight="18.0" prefWidth="195.0" textFill="RED" />
+   </children>
+</AnchorPane>
